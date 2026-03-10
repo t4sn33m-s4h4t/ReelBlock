@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ReelBlock — Settings</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="logo">🛡️ ReelBlock</div>
+      <div class="logo-sub">Settings</div>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-title">Daily Time Limit</div>
+        <div class="slider-val" id="limitVal">60 minutes</div>
+        <input type="range" class="slider" id="limitSlider" min="5" max="180" step="5" value="60">
+        <div class="slider-ends"><span>5 min</span><span>3 hrs</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Daily Reset Time</div>
+        <div class="radio-group">
+          <label class="radio-row"><input type="radio" name="reset" value="0"> Midnight (12:00 AM)</label>
+          <label class="radio-row"><input type="radio" name="reset" value="6"> Morning (6:00 AM)</label>
+          <label class="radio-row"><input type="radio" name="reset" value="12"> Noon (12:00 PM)</label>
+          <label class="radio-row"><input type="radio" name="reset" value="18"> Evening (6:00 PM)</label>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Usage Alert Interval</div>
+        <div class="card-desc">Show an alert while watching reels every</div>
+        <div class="radio-group">
+          <label class="radio-row"><input type="radio" name="alertInterval" value="0"> Disabled</label>
+          <label class="radio-row"><input type="radio" name="alertInterval" value="5"> Every 5 minutes</label>
+          <label class="radio-row"><input type="radio" name="alertInterval" value="10"> Every 10 minutes</label>
+          <label class="radio-row"><input type="radio" name="alertInterval" value="15"> Every 15 minutes</label>
+          <label class="radio-row"><input type="radio" name="alertInterval" value="30"> Every 30 minutes</label>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Today's Usage</div>
+        <div class="usage-row">
+          <span class="usage-val" id="usageUsed">0m 0s</span>
+          <span class="usage-sep">used today</span>
+        </div>
+        <button class="reset-btn" id="resetBtn">Reset today's data</button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Theme</div>
+        <div class="theme-grid" id="themeGrid">
+          <label class="theme-swatch" data-theme="dark-default"><input type="radio" name="theme" value="dark-default"><span class="swatch" style="background:#0d0f14;border-color:#6c8ef5"></span><span>Default</span></label>
+          <label class="theme-swatch" data-theme="dark-oled"><input type="radio" name="theme" value="dark-oled"><span class="swatch" style="background:#000;border-color:#60a5fa"></span><span>OLED</span></label>
+          <label class="theme-swatch" data-theme="dark-purple"><input type="radio" name="theme" value="dark-purple"><span class="swatch" style="background:#0d0b14;border-color:#a78bfa"></span><span>Purple</span></label>
+          <label class="theme-swatch" data-theme="dark-blue"><input type="radio" name="theme" value="dark-blue"><span class="swatch" style="background:#0a0e1a;border-color:#3b82f6"></span><span>Blue</span></label>
+          <label class="theme-swatch" data-theme="dark-green"><input type="radio" name="theme" value="dark-green"><span class="swatch" style="background:#0a120d;border-color:#22c55e"></span><span>Green</span></label>
+          <label class="theme-swatch" data-theme="dark-red"><input type="radio" name="theme" value="dark-red"><span class="swatch" style="background:#120a0a;border-color:#ef4444"></span><span>Red</span></label>
+          <label class="theme-swatch" data-theme="light-white"><input type="radio" name="theme" value="light-white"><span class="swatch" style="background:#f8fafc;border-color:#6c8ef5"></span><span>White</span></label>
+          <label class="theme-swatch" data-theme="dark-slate"><input type="radio" name="theme" value="dark-slate"><span class="swatch" style="background:#0b0d12;border-color:#38bdf8"></span><span>Slate</span></label>
+        </div>
+      </div>
+
+      <button class="save-btn" id="saveBtn">Save Settings</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="options.js"></script>
+</body>
+</html>

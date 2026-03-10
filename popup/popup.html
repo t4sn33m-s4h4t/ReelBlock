@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ReelBlock</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app">
+
+    <header>
+      <div class="logo">
+        <span>🛡️</span>
+        <span class="logo-text">ReelBlock</span>
+      </div>
+      <button class="opt-btn" id="optBtn" title="Settings">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Big Toggle -->
+    <div class="toggle-section">
+      <div class="toggle-label" id="toggleLabel">Reels Blocked</div>
+      <label class="big-toggle">
+        <input type="checkbox" id="masterToggle">
+        <span class="bt-track">
+          <span class="bt-thumb">
+            <svg class="bt-icon off-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+            <svg class="bt-icon on-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+        </span>
+      </label>
+      <div class="toggle-sub" id="toggleSub">All reels & shorts are blocked</div>
+    </div>
+
+    <!-- Stats (only visible when toggle is ON) -->
+    <div class="stats-section" id="statsSection">
+      <div class="stat-row">
+        <div class="stat">
+          <div class="stat-val" id="statUsed">0m</div>
+          <div class="stat-lbl">used</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-val" id="statLeft">60m</div>
+          <div class="stat-lbl">left</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-val" id="statLimit">60m</div>
+          <div class="stat-lbl">limit</div>
+        </div>
+      </div>
+      <div class="pbar">
+        <div class="pbar-fill" id="pbarFill"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span id="footerLabel">Resets at 12:00 PM</span>
+      </div>
+      <a class="footer-credit" href="https://www.facebook.com/t4sn33m.s4h4t/" target="_blank">Tasneem Sahat</a>
+    </div>
+
+    <div class="limit-msg" id="limitMsg">
+      ⏱️ Daily limit reached. Resets at noon.
+    </div>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
