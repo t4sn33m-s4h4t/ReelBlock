@@ -25,7 +25,7 @@
 
 ### Option 1 — Download ZIP (easiest)
 
-**[⬇️ Download reelblock.zip from here]( )**
+**[⬇️ Download reelblock.zip from here](https://github.com/t4sn33m-s4h4t/ReelBlock/raw/refs/heads/main/reelblock.zip)**
  
 
 1. Download the file
@@ -118,14 +118,4 @@ reelblock/
 
 ---
 
-## 👤 Creator
-
-Made by **Tasneem Sahat**
-
-🔗 [facebook.com/t4sn33m.s4h4t](https://www.facebook.com/t4sn33m.s4h4t/)
-
----
-
-## 📄 License
-
-MIT — free to use, modify, and share.
+ 
